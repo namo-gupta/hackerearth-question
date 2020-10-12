@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    int d;
+    cin>>t>>d;
+    int a[t];
+    for(int i=0;i<t;i++)
+    cin>>a[i];
+    int c=0,s=0;
+    for(int i=0;i<t;i++)
+    {
+        if(a[i]<=d)
+        {
+            c++;
+        }
+        else
+        {
+            s++;
+        }
+        if(s>1)
+        break;
+    }
+    cout<<c;
+    return 0;
+}
