@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int N,p,q,r;
+        cin>>N>>p>>q>>r;
+        int c=0;
+        for(int i=1;i<=N;i++)
+        {
+           if((i%p==0) && (i%q!=0) && (i%r!=0))
+           c++;
+           else if((i%p!=0) && (i%q==0) && (i%r!=0))
+           c++;
+           else if((i%p!=0) && (i%q!=0) && (i%r==0))
+           c++;
+        }
+        cout<<c<<endl;
+    }
+    return 0;
+}
