@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        int a[n];
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        sort(a,a+n);
+        int tem=a[0];
+        if(k-tem<=0)
+        cout<<0<<endl;
+        else
+        cout<<k-tem<<endl;
+    }
+    return 0;
+}
