@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    
+    for(int i=0;i<t;i++)
+    {
+    int c=0;
+    string str; 
+    cin>>str;
+    sort(str.begin(),str.end());
+    for(int j=1;j<str.length();j++)
+    {
+        if(str[j-1]+1==str[j])
+        c++;
+    }
+    if(c+1==str.size())
+    cout<<"YES"<<endl;
+    else
+    cout<<"NO\n";
+    }
+    
+}
