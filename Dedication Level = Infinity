@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#include<map>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    map<int,string> m;
+    while(t--)
+    {
+       string name;
+       int time;
+       cin>>name>>time;
+       m.insert(pair<int,string>(time,name));
+    }
+    map<int,string>::reverse_iterator rit;
+    int i=1;
+    for(rit=m.rbegin();rit!=m.rend();rit++)
+    {
+        if(i==4)
+        break;
+        cout<<rit->second<<endl;
+        i++;
+    }
+    return 0;
+}
