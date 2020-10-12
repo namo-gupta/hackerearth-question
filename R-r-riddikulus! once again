@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include<deque>
+using namespace std;
+int main()
+{
+    int n,e;
+    cin>>n>>e;
+    int a[n];
+    deque<int> d;
+    for(int i=0;i<n;i++)
+    {
+    cin>>a[i];
+    d.push_back(a[i]);
+    }
+    for(int i=1;i<=e;i++)
+    {
+        int x=d.front();
+        d.pop_front();
+        d.push_back(x);
+    }
+    for(auto x:d)
+    cout<<x<<" ";
+    return 0;
+}
