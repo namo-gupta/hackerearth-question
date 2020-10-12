@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<stack>
+using namespace std;
+int main()
+{
+    string str;
+    cin>>str;
+    stack<char> st;
+    st.push(str[0]);
+    string ans;
+    for(int i=1;i<str.size();i++)
+    {
+        if(st.empty())
+        st.push(str[i]);
+        else
+        {
+            if(st.top()==str[i])
+            st.pop();
+            else
+            st.push(str[i]);
+        }
+    }
+    while(!st.empty())
+    {
+        ans=st.top()+ans;
+        st.pop();
+    }
+    if(ans.size()==0)
+    cout<<"Empty String";
+    else
+    cout<<ans;
+    return 0;
+}
