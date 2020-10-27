@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    queue<int> call;
+    int ideal[n];
+    for(int i=0;i<n;i++)
+    {
+        int num;
+        cin>>num;
+        call.push(num);
+    }
+    for(int i=0;i<n;i++)
+    {
+        cin>>ideal[i];
+    }
+    int i=0,c=0;
+     while(!call.empty())
+     {
+    while(call.front()!=ideal[i])
+    {
+        int a=call.front();
+        call.pop();
+        call.push(a);
+        c++;
+    }
+    call.pop();c++;i++;
+     }
+    
+      
+   
+    cout<<c;
+    return 0;
+}
